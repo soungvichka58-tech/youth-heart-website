@@ -1,6 +1,11 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import itcGroupPhoto from "./photo/Youth heart 05-2026-11.webp";
+import classroomPhoto from "./photo/IMG_4111.jpg";
+import donationPhoto from "./photo/photo_2026-05-28_10-57-46.jpg";
+import schoolVisitPhoto from "./photo/Youth heart part5-06805.jpg";
+import ruralStudentPhoto from "./photo/Youth heart part6-0277.jpg";
 import {
   Heart,
   Sparkles,
@@ -31,7 +36,7 @@ import {
 // ============================================================================
 // 📸 [ដាក់រូបភាពរបស់អ្នកនៅទីនេះ / PUT YOUR PHOTOS HERE IN ONE PLACE!]
 // ============================================================================
-// Add your own photos to public/images, then use paths like "/images/mission-1.jpg".
+// Add photos to app/photo, import them above, then use their .src values below.
 // ============================================================================
 
 const USER_PHOTOS_CONFIG = {
@@ -48,8 +53,7 @@ const USER_PHOTOS_CONFIG = {
       subtitle: "ដើមកំណើតនៃក្រុមការងារ បេះដូងយុវជន នៅសាលាតិចណូ",
       badge: "ដើមកំណើតនៅ ITC",
       // 👇 [ដាក់រូបភាពទី ១ នៅទីនេះ / PUT ORIGIN PHOTO #1 HERE] 👇
-      image:
-        "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=80",
+      image: itcGroupPhoto.src,
     },
     {
       id: "origin-sub",
@@ -58,8 +62,7 @@ const USER_PHOTOS_CONFIG = {
       subtitle: "កម្លាំងសាមគ្គីរបស់សមាជិកក្រុមការងារ បេះដូងយុវជន",
       badge: "ការត្រៀមបេសកកម្ម",
       // 👇 [ដាក់រូបភាពទី ២ នៅទីនេះ / PUT ORIGIN PHOTO #2 HERE] 👇
-      image:
-        "https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=1000&q=80",
+      image: donationPhoto.src,
     },
   ],
 
@@ -69,29 +72,25 @@ const USER_PHOTOS_CONFIG = {
       id: "pillar-1",
       codeVariable: "USER_PHOTOS_CONFIG.pillarsPhotos.pillar1.image",
       // 👇 [ដាក់រូបភាពគោលបំណងទី ១៖ បេសកកម្មសប្បុរសធម៌តាមខេត្ត (Mission 25, 29)] 👇
-      image:
-        "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1000&q=80",
+      image: classroomPhoto.src,
     },
     pillar2: {
       id: "pillar-2",
       codeVariable: "USER_PHOTOS_CONFIG.pillarsPhotos.pillar2.image",
       // 👇 [ដាក់រូបភាពគោលបំណងទី ២៖ ការចែករំលែក និងជំនួយសម្ភារសិក្សា] 👇
-      image:
-        "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1000&q=80",
+      image: donationPhoto.src,
     },
     pillar3: {
       id: "pillar-3",
       codeVariable: "USER_PHOTOS_CONFIG.pillarsPhotos.pillar3.image",
       // 👇 [ដាក់រូបភាពគោលបំណងទី ៣៖ ការអប់រំ និងការបំផុសគំនិតដល់កុមារ] 👇
-      image:
-        "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1000&q=80",
+      image: classroomPhoto.src,
     },
     pillar4: {
       id: "pillar-4",
       codeVariable: "USER_PHOTOS_CONFIG.pillarsPhotos.pillar4.image",
       // 👇 [ដាក់រូបភាពគោលបំណងទី ៤៖ ការលើកកម្ពស់ស្មារតីសង្គមក្នុងចំណោមយុវជន ITC] 👇
-      image:
-        "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1000&q=80",
+      image: itcGroupPhoto.src,
     },
   },
 
@@ -108,8 +107,7 @@ const USER_PHOTOS_CONFIG = {
       description:
         "ស្នាមញញឹមនៃការចុះជួយសហគមន៍ និងសាលារៀនដាច់ស្រយាល ដោយនាំយកនូវក្តីស្រឡាញ់ពីនិស្សិត ITC និងសប្បុរសជន។",
       // 👇 [ដាក់រូបភាពបេសកកម្មទី ១ នៅទីនេះ / PUT MISSION PHOTO #1 HERE] 👇
-      image:
-        "https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&w=1200&q=80",
+      image: classroomPhoto.src,
       featuredSize: "large",
     },
     {
@@ -122,8 +120,7 @@ const USER_PHOTOS_CONFIG = {
       description:
         "ប្រមូលការបរិច្ចាគថវិកា សម្ភារសិក្សា សៀវភៅ និងខោអាវ ដើម្បីចែកជូនដល់ដៃប្អូនៗសិស្សានុសិស្សផ្ទាល់។",
       // 👇 [ដាក់រូបភាពបេសកកម្មទី ២ នៅទីនេះ / PUT MISSION PHOTO #2 HERE] 👇
-      image:
-        "https://images.unsplash.com/photo-1497486751825-1233686d5d80?auto=format&fit=crop&w=1000&q=80",
+      image: donationPhoto.src,
       featuredSize: "normal",
     },
     {
@@ -136,8 +133,7 @@ const USER_PHOTOS_CONFIG = {
       description:
         "ការចុះចែកគ្រឿងឧបភោគបរិភោគ និងសួរសុខទុក្ខគ្រួសារខ្វះខាតនៅតាមភូមិដាច់ស្រយាល។",
       // 👇 [ដាក់រូបភាពបេសកកម្មទី ៣ នៅទីនេះ / PUT MISSION PHOTO #3 HERE] 👇
-      image:
-        "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=1000&q=80",
+      image: ruralStudentPhoto.src,
       featuredSize: "normal",
     },
     {
@@ -150,8 +146,7 @@ const USER_PHOTOS_CONFIG = {
       description:
         "បង្កើតភាពស្និទ្ធស្នាល ល្បែងសិក្សា និងផ្តល់ក្តីសង្ឃឹមដល់កុមារនៅតាមសាលារៀនដាច់ស្រយាល។",
       // 👇 [ដាក់រូបភាពបេសកកម្មទី ៤ នៅទីនេះ / PUT MISSION PHOTO #4 HERE] 👇
-      image:
-        "https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=1000&q=80",
+      image: classroomPhoto.src,
       featuredSize: "normal",
     },
     {
@@ -164,8 +159,7 @@ const USER_PHOTOS_CONFIG = {
       description:
         "ឱកាសសម្រាប់និស្សិត ITC និងយុវជនទូទៅក្នុងការអនុវត្តការងារស្ម័គ្រចិត្ត និងពង្រឹងជំនាញទន់ (Soft Skills)។",
       // 👇 [ដាក់រូបភាពបេសកកម្មទី ៥ នៅទីនេះ / PUT MISSION PHOTO #5 HERE] 👇
-      image:
-        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80",
+      image: schoolVisitPhoto.src,
       featuredSize: "large",
     },
     {
@@ -178,8 +172,7 @@ const USER_PHOTOS_CONFIG = {
       description:
         "សកម្មភាពរួមគ្នាដោយក្តីស្រឡាញ់រវាងក្រុមការងារបេះដូងយុវជន លោកគ្រូអ្នកគ្រូ និងសិស្សានុសិស្ស។",
       // 👇 [ដាក់រូបភាពបេសកកម្មទី ៦ នៅទីនេះ / PUT MISSION PHOTO #6 HERE] 👇
-      image:
-        "https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&w=1000&q=80",
+      image: itcGroupPhoto.src,
       featuredSize: "normal",
     },
     {
@@ -192,8 +185,7 @@ const USER_PHOTOS_CONFIG = {
       description:
         "ជំនួយសប្បុរសធម៌រួមមានអង្ករ ស្បៀងអាហារ សម្លៀកបំពាក់ និងសម្ភារប្រើប្រាស់ប្រចាំថ្ងៃ។",
       // 👇 [ដាក់រូបភាពបេសកកម្មទី ៧ នៅទីនេះ / PUT MISSION PHOTO #7 HERE] 👇
-      image:
-        "https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=1000&q=80",
+      image: classroomPhoto.src,
       featuredSize: "normal",
     },
     {
@@ -207,14 +199,72 @@ const USER_PHOTOS_CONFIG = {
       description:
         "បេះដូងតែមួយ ដើម្បីស្នាមញញឹមកុមារ និងការអភិវឌ្ឍសហគមន៍ដាច់ស្រយាលនៅកម្ពុជា។",
       // 👇 [ដាក់រូបភាពបេសកកម្មទី ៨ នៅទីនេះ / PUT MISSION PHOTO #8 HERE] 👇
-      image:
-        "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+      image: schoolVisitPhoto.src,
+      featuredSize: "normal",
+    },
+    {
+      id: "mission-photo-9",
+      codeVariable: "USER_PHOTOS_CONFIG.pastMissionGallery[8].image",
+      category: "education",
+      missionTag: "ការអប់រំ & បំផុសគំនិត",
+      location: "សាលារៀនតាមខេត្ត",
+      title: "ការចែករំលែកចំណេះដឹងជាមួយសិស្សានុសិស្ស",
+      description:
+        "សកម្មភាពសិក្សា និងការជួយគាំទ្រកុមារនៅក្នុងថ្នាក់រៀន។",
+      image: classroomPhoto.src,
+      featuredSize: "normal",
+    },
+    {
+      id: "mission-photo-10",
+      codeVariable: "USER_PHOTOS_CONFIG.pastMissionGallery[9].image",
+      category: "volunteers",
+      missionTag: "និស្សិតស្ម័គ្រចិត្ត ITC",
+      location: "សាលារៀនតាមខេត្ត",
+      title: "សកម្មភាពស្ម័គ្រចិត្ត និងការអប់រំកុមារ",
+      description:
+        "ក្រុមយុវជនស្ម័គ្រចិត្តចូលរួមបង្កើតបរិយាកាសសិក្សាដ៏រីករាយ។",
+      image: schoolVisitPhoto.src,
+      featuredSize: "normal",
+    },
+    {
+      id: "mission-photo-11",
+      codeVariable: "USER_PHOTOS_CONFIG.pastMissionGallery[10].image",
+      category: "education",
+      missionTag: "ការអប់រំ & បំផុសគំនិត",
+      location: "សាលារៀនតាមខេត្ត",
+      title: "ការណែនាំ និងលើកទឹកចិត្តសិស្សក្នុងថ្នាក់រៀន",
+      description:
+        "និស្សិតស្ម័គ្រចិត្តចូលរួមជួយណែនាំសិស្ស និងលើកទឹកចិត្តការសិក្សា។",
+      image: classroomPhoto.src,
+      featuredSize: "normal",
+    },
+    {
+      id: "mission-photo-12",
+      codeVariable: "USER_PHOTOS_CONFIG.pastMissionGallery[11].image",
+      category: "volunteers",
+      missionTag: "និស្សិតស្ម័គ្រចិត្ត ITC",
+      location: "សកម្មភាពសហគមន៍",
+      title: "ការចូលរួមរបស់ក្រុមការងារ បេះដូងយុវជន",
+      description:
+        "យុវជនស្ម័គ្រចិត្តរួមគ្នាចូលរួមក្នុងសកម្មភាពជាមួយសហគមន៍។",
+      image: donationPhoto.src,
+      featuredSize: "normal",
+    },
+    {
+      id: "mission-photo-13",
+      codeVariable: "USER_PHOTOS_CONFIG.pastMissionGallery[12].image",
+      category: "mission29",
+      missionTag: "បេសកកម្មសប្បុរសធម៌ • Charity Mission",
+      location: "សហគមន៍តាមបណ្តាខេត្ត",
+      title: "ដំណើរបេសកកម្មសប្បុរសធម៌របស់ក្រុមការងារ",
+      description:
+        "ការចុះជួបសហគមន៍ និងចែករំលែកក្តីស្រឡាញ់ជាមួយកុមារ និងគ្រួសារ។",
+      image: ruralStudentPhoto.src,
       featuredSize: "normal",
     },
   ],
 };
 
-type PillarKey = keyof typeof USER_PHOTOS_CONFIG.pillarsPhotos;
 type LightboxPhoto = {
   image: string;
   title: string;
@@ -494,28 +544,7 @@ export default function App() {
                 ដំណើរបេសកកម្ម
               </a>
             </nav>
-
             {/* Right Controls: Code Guide Helper & Dark/Light Mode */}
-            <div className="flex items-center gap-2.5">
-              <button
-                onClick={() => setShowCodeModal(true)}
-                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold bg-amber-500/15 text-amber-700 dark:text-amber-300 border border-amber-500/30 hover:bg-amber-500/25 transition-all"
-                title="មើលកន្លែងដាក់រូបភាពក្នុងកូដ"
-              >
-                <Code2 className="w-4 h-4 shrink-0" />
-                <span className="hidden sm:inline">កន្លែងដាក់រូបក្នុងកូដ</span>
-              </button>
-
-              <a
-                href="https://www.facebook.com/search/top?q=%E1%9E%94%E1%9F%81%E1%9F%87%E1%9E%8A%E1%9E%BC%E1%9E%84%E1%9E%99%E1%9E%BB%E1%9E%9C%E1%9E%87%E1%9E%93%20Youth%20Heart%20Team"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold bg-[#46629E] hover:bg-[#364f84] text-white shadow-md shadow-[#46629E]/25 transition-all"
-              >
-                <ExternalLink className="w-4 h-4" />
-                <span>Facebook Page</span>
-              </a>
-            </div>
           </div>
         </header>
 
@@ -1428,7 +1457,7 @@ export default function App() {
                       របៀបដាក់រូបភាពរបស់អ្នកនៅក្នុងកូដ (Photo Guide)
                     </h3>
                     <p className="text-xs text-slate-500">
-                      ដាក់រូបភាពក្នុង public/images ហើយកែរូបភាពនៅ
+                      ដាក់រូបភាពក្នុង app/photo ហើយកែរូបភាពនៅ
                       USER_PHOTOS_CONFIG ខាងលើនៃ page.tsx
                     </p>
                   </div>
@@ -1451,11 +1480,11 @@ export default function App() {
                 <p>
                   ២. ដាក់រូបភាពរបស់អ្នកក្នុងថត{" "}
                   <code className="px-2 py-0.5 rounded bg-slate-200 dark:bg-slate-800 text-amber-600 dark:text-amber-300 font-mono">
-                    public/images
+                    app/photo
                   </code>{" "}
-                  រួចបញ្ចូល path របស់វា ដូចជា{" "}
+                  រួច import នៅផ្នែកខាងលើនៃ page.tsx ហើយប្រើ{" "}
                   <code className="px-2 py-0.5 rounded bg-slate-200 dark:bg-slate-800 text-amber-600 dark:text-amber-300 font-mono">
-                    image: &quot;/images/mission-1.jpg&quot;
+                    image: missionPhoto.src
                   </code>{" "}
                   នៅក្នុង object រូបភាពដែលអ្នកចង់ប្តូរ។
                 </p>
@@ -1463,18 +1492,16 @@ export default function App() {
 
               <div className="p-4 rounded-2xl bg-slate-950 text-slate-200 font-mono text-xs overflow-x-auto space-y-1">
                 <p className="text-emerald-400">
-                  {"// ដាក់ឯកសារនៅ public/images/mission-1.jpg"}
+                  {'import missionPhoto from "./photo/mission-1.jpg";'}
                 </p>
                 <p>
                   {"// app/page.tsx → USER_PHOTOS_CONFIG.pastMissionGallery[0]"}
                 </p>
                 <p className="text-amber-300">
-                  image: &quot;/images/mission-1.jpg&quot;,
+                  image: missionPhoto.src,
                 </p>
                 <p className="text-slate-400">
-                  {
-                    "// Repeat for originPhotos, pillarsPhotos, and other gallery photos."
-                  }
+                  {"// Repeat for originPhotos, pillarsPhotos, and gallery photos."}
                 </p>
               </div>
 
